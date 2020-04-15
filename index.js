@@ -1,9 +1,7 @@
 const express = require("express");
-const router = require("./routes/country");
 const Country = require("./models/Country");
 const parser = require("body-parser");
 const app = express();
-app.use(router);
 app.use(parser.json());
 
 app.get("/", (req, res) => {
@@ -14,6 +12,19 @@ app.get("/", (req, res) => {
 
 app.get("/countries/:name", (req, res) => {
   Country.find({ name: req.params.name }).then((country) => {
+    res.json(country);
+  });
+});
+
+app.get("/capital/:capital", (req, res) => {
+  Country.find({ capital: req.params.capital }).then((country) => {
+    res.json(country);
+  });
+});
+
+app.get("/currencies/:currencies", (req, res) => {
+  console.log(req.params);
+  Country.find({ "currencies.name": req.params.currencies }).then((country) => {
     res.json(country);
   });
 });
