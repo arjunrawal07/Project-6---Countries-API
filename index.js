@@ -15,6 +15,20 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/name/:name", (req, res) => {
+  Country.find({ name: req.params.name }).then((country) => {
+    res.json(country);
+  });
+});
+
+app.post("/country", (req, res) => {
+  Country.create(req.body).then((newCountry) => {
+    res.json(newCountry);
+  });
+});
+
+// app.post("/country/:name/")
+
 app.listen(4000, () => {
   console.log("I'm listening on 4000!");
 });
