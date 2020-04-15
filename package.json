@@ -1,0 +1,26 @@
+{
+  "name": "project-6---dictionary-api",
+  "version": "1.0.0",
+  "description": "dictionary api full of words",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjunrawal07/Project-6---Dictionary-API.git"
+  },
+  "author": "Arjun Rawal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arjunrawal07/Project-6---Dictionary-API/issues"
+  },
+  "homepage": "https://github.com/arjunrawal07/Project-6---Dictionary-API#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9",
+    "node-fetch": "^2.6.0"
+  }
+}
