@@ -26,6 +26,14 @@ app.post("/country", (req, res) => {
   });
 });
 
+app.put("/countries/:name", (req, res) => {
+  Country.findOneAndUpdate({ name: req.params.name }, req.body, {
+    new: true,
+  }).then((country) => {
+    res.json(country);
+  });
+});
+
 app.listen(4000, () => {
   console.log("I'm listening on 4000!");
 });
