@@ -1,7 +1,15 @@
 const express = require("express");
+const app = express();
+// const swaggerUi = require("swagger-ui-express");
+// const swaggerDocument = require("./swagger.ts");
+
+// var options = {
+//   explorer: true,
+// };
 const Country = require("./models/Country");
 const parser = require("body-parser");
-const app = express();
+
+// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(parser.json());
 
 app.get("/", (req, res) => {
