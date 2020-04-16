@@ -37,6 +37,12 @@ app.post("/country", (req, res) => {
   });
 });
 
+app.delete("/countries/:name", (req, res) => {
+  Country.findOneAndDelete({ name: req.params.name }).then((country) => {
+    res.json(country);
+  });
+});
+
 app.put("/countries/:name", (req, res) => {
   Country.findOneAndUpdate({ name: req.params.name }, req.body, {
     new: true,
