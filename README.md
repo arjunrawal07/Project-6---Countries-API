@@ -1,12 +1,12 @@
 # Project-6---Countries-API
 
-##Intro to Countries API
+## Intro to Countries API
 
 Welcome to my Countries API. This API hosts country profiles with specific data on every country available in the [European Union's RESTCountries API](https://restcountries.eu/).
 
 Technologies used include Express, Mongoose, and MongoDB.
 
-##What You Will Find
+## What You Will Find
 Each country profile contains the following data:
 
 - Name
