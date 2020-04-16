@@ -59,6 +59,8 @@ app.put("/countries/:name", (req, res) => {
   });
 });
 
-app.listen(4000, () => {
-  console.log("I'm listening on 4000!");
+app.set("port", process.env.PORT || 4000);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
 });
