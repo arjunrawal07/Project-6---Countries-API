@@ -8,7 +8,10 @@ const app = express();
 // };
 const Country = require("./models/Country");
 const parser = require("body-parser");
-
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
 // app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(parser.json());
 
