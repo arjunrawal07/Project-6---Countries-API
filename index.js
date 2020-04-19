@@ -10,6 +10,11 @@ const Country = require("./models/Country");
 const parser = require("body-parser");
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "POST", "GET", "PUT", "DELETE");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+  );
   next();
 });
 // app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
