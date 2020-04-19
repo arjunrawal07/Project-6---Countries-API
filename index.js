@@ -46,8 +46,8 @@ app.get("/currencies/:currencies", (req, res) => {
 });
 
 app.post("/country", (req, res) => {
-  console.log(req.body);
-  Country.create(req.body).then((country) => {
+  console.log(req.data);
+  Country.create(req.data).then((country) => {
     console.log("Successfully created", country);
     res.json(country);
   });
