@@ -1,4 +1,5 @@
 const express = require("express");
+var cors = require("cors");
 const app = express();
 // const swaggerUi = require("swagger-ui-express");
 // const swaggerDocument = require("./swagger.ts");
@@ -8,9 +9,16 @@ const app = express();
 // };
 const Country = require("./models/Country");
 const parser = require("body-parser");
+app.use(cors());
+app.get("/products/:id", function (req, res, next) {
+  res.json({ msg: "This is CORS-enabled for all origins!" });
+});
+app.listen(3000, function () {
+  console.log("CORS-enabled web server listening on port 80");
+});
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "POST", "GET", "PUT", "DELETE");
+  res.header("Access-Control-Allow-Methods", "POST", "PUT", "DELETE");
   res.header(
     "Access-Control-Allow-Headers",
     "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
