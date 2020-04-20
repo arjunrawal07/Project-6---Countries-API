@@ -12,11 +12,11 @@ const countryEntries = countryData.map((item) => {
     languages.push(item.languages[i].name);
   }
   const country = {};
-  country.Name = item.name;
-  country.Capital = item.capital;
-  country.Population = item.population;
-  country.Currencies = currencies;
-  country.Languages = languages;
+  country.name = item.name;
+  country.capital = item.capital;
+  country.population = item.population;
+  country.currencies = currencies;
+  country.languages = languages;
   return country;
 });
 
