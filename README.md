@@ -1,8 +1,8 @@
-# Project-6---Countries-API
+# Around the World API
 
-## Intro to Countries API
+## Description
 
-Welcome to my Countries API. This API hosts country profiles with specific data on every country available in the [European Union's RESTCountries API](https://restcountries.eu/).
+This API hosts country profiles for the Around the World application with specific data on every country available in the [European Union's RESTCountries API](https://restcountries.eu/).
 
 Technologies used include Express, Mongoose, and MongoDB.
 
@@ -17,7 +17,7 @@ Each country profile contains the following data:
 
 When queried, each endpoint will return data in the following format:
 
-```
+```js
 "name": "Afghanistan",
     "capital": "Kabul",
     "population": 27657145,
